@@ -1,0 +1,22 @@
+h2{
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+li:hover {
+    cursor: pointer;
+    border-right: 1px solid rgb(64, 64, 64);
+    border-bottom: 1px solid rgb(64, 64, 64);
+    border-bottom-right-radius: 10px;
+    font-size: 1.2rem;
+}
