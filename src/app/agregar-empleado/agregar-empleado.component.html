@@ -1,1 +1,15 @@
-<p>agregar-empleado works!</p>
+<div>
+    <form (ngSubmit)="guardarData()" #empleadoForm="ngForm">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" name="nombre" [(ngModel)]="empleado.nombre" type="text" placeholder="nombre del empleado">
+        </div>
+        <div>
+            <label for="cargo">Cargo:</label>
+            <input id="cargo" name="cargo" [(ngModel)]="empleado.cargo" type="text" placeholder="cargo del empleado" required>
+        </div>
+        <div>
+            <button [disabled]="!empleadoForm.form.valid">Crear</button>
+        </div>
+    </form>
+</div>

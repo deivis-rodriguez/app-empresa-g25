@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -8,7 +11,9 @@ import { NavComponent } from './nav/nav.component';
 import { AsideComponent } from './aside/aside.component';
 import { ListarEmpleadosComponent } from './listar-empleados/listar-empleados.component';
 import { AgregarEmpleadoComponent } from './agregar-empleado/agregar-empleado.component';
-import { BonoComponent } from './bono/bono.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { EmpleadoService } from './empleado.service';
+import { DetalleEmpleadoComponent } from './detalle-empleado/detalle-empleado.component';
 
 
 @NgModule({
@@ -20,12 +25,16 @@ import { BonoComponent } from './bono/bono.component';
     AsideComponent,
     ListarEmpleadosComponent,
     AgregarEmpleadoComponent,
-    BonoComponent
+    DashboardComponent,
+    DetalleEmpleadoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [EmpleadoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

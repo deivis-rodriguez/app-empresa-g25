@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EmpleadoService } from '../empleado.service';
+import { Empleado } from '../empleados';
 
 @Component({
   selector: 'app-agregar-empleado',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgregarEmpleadoComponent implements OnInit {
 
-  constructor() { }
+  empleado: Empleado
+
+  constructor(private empleadoService: EmpleadoService) {
+    this.empleado = new Empleado();
+  }
 
   ngOnInit(): void {
   }
 
+  guardarData(){
+    console.log(this.empleado);
+    this.empleadoService.guardarEmpleado(this.empleado).subscribe();
+  }
 }
