@@ -3,9 +3,10 @@
 
 <div class="contenedor-central">
   <div>
-    <app-listar-empleados></app-listar-empleados>
+    <app-listar-empleados *ngIf="mostrar"></app-listar-empleados>
+    <app-agregar-empleado *ngIf="!mostrar"></app-agregar-empleado>
   </div>
-  <app-aside></app-aside>
+  <app-aside (notificar)="actualizarVista()"></app-aside>
 </div>
 
 <app-footer></app-footer>

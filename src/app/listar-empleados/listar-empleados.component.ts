@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { empleados, Empleado } from '../empleados';
 
 @Component({
   selector: 'app-listar-empleados',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarEmpleadosComponent implements OnInit {
 
-  constructor() { }
+  listaEmpleados = empleados;
 
-  ngOnInit(): void {
+  /*for (let empleado of this.listaEmpleados) {
+
+   }*/
+
+  constructor() {
   }
+
+  ngOnInit(): void {  }
 
 }

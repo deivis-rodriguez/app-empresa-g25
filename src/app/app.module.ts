@@ -7,6 +7,9 @@ import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
 import { AsideComponent } from './aside/aside.component';
 import { ListarEmpleadosComponent } from './listar-empleados/listar-empleados.component';
+import { AgregarEmpleadoComponent } from './agregar-empleado/agregar-empleado.component';
+import { BonoComponent } from './bono/bono.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,9 @@ import { ListarEmpleadosComponent } from './listar-empleados/listar-empleados.co
     FooterComponent,
     NavComponent,
     AsideComponent,
-    ListarEmpleadosComponent
+    ListarEmpleadosComponent,
+    AgregarEmpleadoComponent,
+    BonoComponent
   ],
   imports: [
     BrowserModule

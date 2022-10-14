@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  
+  mostrar:boolean;
+
+  constructor(){
+    this.mostrar = true;
+  }
+
+  actualizarVista(){
+    this.mostrar = !this.mostrar;
+  }
 }

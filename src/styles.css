@@ -13,9 +13,9 @@ app-aside {
 }
 
 app-footer {
-    position: absolute;
+    /*position: absolute;
     bottom: 5px;
-    width: 98.5%;
+    width: 98.5%;*/
     display: flex;
     justify-content: space-between;
 }
