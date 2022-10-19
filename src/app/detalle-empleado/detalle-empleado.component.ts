@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmpleadoService } from '../empleado.service';
 import { ActivatedRoute } from '@angular/router';
 import { Empleado } from '../empleados';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-detalle-empleado',
@@ -14,7 +15,8 @@ export class DetalleEmpleadoComponent implements OnInit {
 
   constructor(
     private empleadoServicio: EmpleadoService,
-    private ruta: ActivatedRoute
+    private ruta: ActivatedRoute,
+    private location: Location
   ) {
     this.empleado = new Empleado()
   }
@@ -24,6 +26,15 @@ export class DetalleEmpleadoComponent implements OnInit {
     this.empleadoServicio.getEmpleado(id).subscribe((empleado: Empleado) => {
       this.empleado = empleado
     })
+  }
+
+  eliminar() {
+    this.empleadoServicio.eliminarEmpleado(this.empleado.idEmpleado).subscribe(
+      () => {
+        alert('empleado eliminado');
+        this.location.back()
+      }
+    )
   }
 
 }

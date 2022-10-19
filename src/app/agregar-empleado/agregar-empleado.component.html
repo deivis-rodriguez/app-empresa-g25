@@ -9,7 +9,7 @@
             <input id="cargo" name="cargo" [(ngModel)]="empleado.cargo" type="text" placeholder="cargo del empleado" required>
         </div>
         <div>
-            <button [disabled]="!empleadoForm.form.valid">Crear</button>
+            <button [disabled]="!empleadoForm.form.valid">{{textoBtn}}</button>
         </div>
     </form>
 </div>

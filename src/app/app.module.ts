@@ -14,6 +14,7 @@ import { AgregarEmpleadoComponent } from './agregar-empleado/agregar-empleado.co
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmpleadoService } from './empleado.service';
 import { DetalleEmpleadoComponent } from './detalle-empleado/detalle-empleado.component';
+import { EditarEmpleadoComponent } from './editar-empleado/editar-empleado.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { DetalleEmpleadoComponent } from './detalle-empleado/detalle-empleado.co
     ListarEmpleadosComponent,
     AgregarEmpleadoComponent,
     DashboardComponent,
-    DetalleEmpleadoComponent
+    DetalleEmpleadoComponent,
+    EditarEmpleadoComponent
   ],
   imports: [
     BrowserModule,

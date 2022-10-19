@@ -10,6 +10,7 @@ import { Empleado } from '../empleados';
 export class AgregarEmpleadoComponent implements OnInit {
 
   empleado: Empleado
+  textoBtn: string = 'Guardar';
 
   constructor(private empleadoService: EmpleadoService) {
     this.empleado = new Empleado();
@@ -20,6 +21,10 @@ export class AgregarEmpleadoComponent implements OnInit {
 
   guardarData(){
     console.log(this.empleado);
-    this.empleadoService.guardarEmpleado(this.empleado).subscribe();
+    this.empleadoService.guardarEmpleado(this.empleado).subscribe(
+      () =>{
+        alert('empleado guardado');
+      }
+    );
   }
 }
